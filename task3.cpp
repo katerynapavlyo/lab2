@@ -23,7 +23,8 @@ int main() {
             std::cout << "The triangle is NOT isosceles." << std::endl;
         }
 
-    } else {
+    } 
+    else {
         std::cout << "Error: The points do NOT form a triangle." << std::endl;
     }
 
