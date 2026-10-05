@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+
 int main() {
     double x1, y1, x2, y2, x3, y3;
 
@@ -14,11 +15,16 @@ int main() {
     double side2 = std::sqrt(std::pow(x3 - x2, 2) + std::pow(y3 - y2, 2));
     double side3 = std::sqrt(std::pow(x1 - x3, 2) + std::pow(y1 - y3, 2));
 
-    if (side1 == side2 || side2 == side3 || side3 == side1) {
-        std::cout << "The triangle is isosceles." << std::endl;
-    } 
-    else {
-        std::cout << "The triangle is NOT isosceles." << std::endl;
+    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+        if (side1 == side2 || side2 == side3 || side3 == side1) {
+            std::cout << "The triangle is isosceles." << std::endl;
+        } 
+        else {
+            std::cout << "The triangle is NOT isosceles." << std::endl;
+        }
+
+    } else {
+        std::cout << "Error: The points do NOT form a triangle." << std::endl;
     }
 
     return 0;
